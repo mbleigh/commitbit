@@ -1,0 +1,28 @@
+body {
+ font-family: "Clear Sans", "Open Sans", Robot, Helvetica, sans-serif;
+}
+
+.repo-page > h1:first-child {
+  font-size: 5em;
+  margin-bottom: 0.2em;
+}
+
+.repo-details dt, dd {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 30px;
+  border: 1px solid #ddd;
+  margin: 0;
+  padding: 0 5px;
+}
+
+.repo-details dt {
+  border-radius: 3px 0 0 3px;
+  margin: 0 0 0 5px;
+  border-right: 0;
+}
+
+.repo-details dd {
+  border-radius: 0 3px 3px 0;
+  margin: 0 5px 0 0;
+}

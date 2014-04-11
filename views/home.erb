@@ -1,0 +1,13 @@
+<h1>CommitBit</h1>
+<h2>Maintaining open source is hard. Adding maintainers should be easy.</h2>
+
+<form id="repo-form">
+  <label for="repo-field">Enter a GitHub Repository:</label>
+  <input type="text" name="repo" placeholder="user/repo" id="repo-field">
+</form>
+<script>
+  document.getElementById('repo-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    window.location.pathname = "/" + document.getElementById('repo-field').value;
+  });
+</script>

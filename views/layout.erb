@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CommitBit - Claim abandoned repos for your own.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/fonts/stylesheet.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/application.css">
+  </head>
+  <body>
+    <header class="navbar navbar-default" role="navigation"><section class="container">
+      <a class="navbar-brand" href="/">CommitBit</a>
+      <aside class="navbar-right">
+        <% if logged_in? %>
+          <b class="navbar-text"><%= current_user[:name] %></b>
+          <a href="/logout" class="btn btn-default navbar-btn">Logout</a>
+        <% else %>
+          <a href="/auth/github" class="btn btn-default navbar-btn">Login with GitHub</a>
+        <% end %>
+      </aside>
+    </section></header>
+    <main class="container">
+      <%= yield %>
+    </main>
+  </body>
+</html>

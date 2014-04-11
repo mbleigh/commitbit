@@ -1,0 +1,22 @@
+{
+  "name": "commitbit",
+  "version": "0.0.0",
+  "authors": [
+    "Michael Bleigh <mbleigh@mbleigh.com>"
+  ],
+  "description": "Helping abandoned repos find good homes.",
+  "license": "MIT",
+  "homepage": "http://www.commitbit.org/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.1"
+  }
+}

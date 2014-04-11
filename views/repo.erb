@@ -1,0 +1,25 @@
+<section class="text-center repo-page">
+  <h1><%= @repo.full_name %></h1>
+  
+  <dl class="repo-details">
+    <dt>Open Issues</dt><dd><%= @repo.open_issues_count %></dd>
+    <dt>Last Commit</dt><dd><%= @repo.pushed_at.strftime("%b %d, %Y") %></dd>
+    <dt>Stars</dt><dd><%= @repo.stargazers_count %></dd>
+  </dl>
+</section>
+
+<hr>
+
+<section class="container">
+  <form role="form" class="col-md-6 col-md-offset-3" method="post">
+    <div class="form-group">
+      <label for="requester_email">Your Email Address</label>
+      <input type="email" class="form-control" name="requester_email" id="requester_email" placeholder="you@example.com" value="<%= current_user[:email] %>">
+    </div>
+    <div class="form-group">
+      <label for="message">Message (Markdown Enabled)</label>
+      <textarea type="password" class="form-control" id="message" name="message" placeholder="I'm using <%= @repo.full_name %> but noticed that it doesn't seem to be actively maintained. I'd love to help out, can you give me commit access?" rows="4"></textarea>
+    </div>
+    <button type="submit" class="btn btn-default btn-block btn-lg btn-success">Request Your Commit Bit!</button>
+  </form>
+</section>
