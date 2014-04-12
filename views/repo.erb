@@ -1,6 +1,6 @@
 <section class="text-center repo-page">
   <h1><%= @repo.full_name %></h1>
-  
+  <p class="lead"><%= @repo.description %></p>
   <dl class="repo-details">
     <dt>Open Issues</dt><dd><%= @repo.open_issues_count %></dd>
     <dt>Last Commit</dt><dd><%= @repo.pushed_at.strftime("%b %d, %Y") %></dd>
