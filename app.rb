@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'octokit'
 
 module CommitBit
   class App < Sinatra::Base
